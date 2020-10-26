@@ -1,15 +1,15 @@
 import React from 'react';
 import {Nav,Navbar} from 'react-bootstrap'
+import {Link} from 'react-router-dom';
 
 function Header(){
     return(
-        <div>
-            <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="#home">Shop.kj</Navbar.Brand>
+        <div >
+            <Navbar  bg="dark" variant="dark">
+                <Link to="/products"><h2 style={{color:"white"}}>Shop.kj</h2></Link>
                 <Nav className="ml-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#features">Features</Nav.Link>
-                <Nav.Link href="#pricing">Pricing</Nav.Link>
+                <Link className="m-2" to="/products"><h5 style={{color:"white"}}>Products</h5></Link>
+                <Link className="m-2" to="/cart"><h5 style={{color:"white"}}>Cart</h5></Link>
                 </Nav>
             </Navbar>
             <br />
