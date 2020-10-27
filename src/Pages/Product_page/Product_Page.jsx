@@ -9,8 +9,8 @@ function Product_Page({products,addToCart}){
                <div className="row">
               {products.map((product,index)=>{
                   return(
-                        <div className="col-6" key={index}>
-                        <Card style={{ width: '18rem' }}>
+                        <div key={index}>
+                        <Card style={{ width: '18rem',margin:"10px" }}>
                         <Card.Img variant="top" width="100px" height="300px" src={product.image} />
                         <Card.Body  style={{textAlign:"center"}}>
                             <Card.Title><u>{product.name}</u></Card.Title>
