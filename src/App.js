@@ -23,18 +23,20 @@ const [products,setProducts]=useState([
 ])
 
 const addToCart=(product)=>{
-  setCart([...cart,product])
+  setCart([...cart,{...product}])
   console.log(cart)
 }
 
-
+const removeFromCart=(productToRemove)=>{
+  setCart(cart.filter(product=>product!==productToRemove))
+}
 
   return (
     <Router>
             <Header cart={cart}/>
         <Switch>
           <Route path="/cart">
-            <Cart_Page cart={cart} />
+            <Cart_Page cart={cart} removeFromCart={removeFromCart}/>
           </Route>
           <Route  path="/">
             <Product_page products={products} addToCart={addToCart}/>

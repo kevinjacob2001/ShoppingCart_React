@@ -12,9 +12,9 @@ function Product_Page({products,addToCart}){
                         <div className="col-6" key={index}>
                         <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" width="100px" height="300px" src={product.image} />
-                        <Card.Body>
-                            <Card.Title>{product.name}</Card.Title>
-                            <Card.Text>{product.cost}</Card.Text>
+                        <Card.Body  style={{textAlign:"center"}}>
+                            <Card.Title><u>{product.name}</u></Card.Title>
+                            <Card.Text><h6>₹{product.cost}</h6></Card.Text>
                             <Button onClick={()=>addToCart(product)} variant="primary">Add to Cart</Button>
                         </Card.Body>
                         </Card>
