@@ -36,7 +36,7 @@ const addToCart=(product)=>{
           <Route path="/cart">
             <Cart_Page cart={cart} />
           </Route>
-          <Route path="/products">
+          <Route  path="/">
             <Product_page products={products} addToCart={addToCart}/>
           </Route>
         </Switch>

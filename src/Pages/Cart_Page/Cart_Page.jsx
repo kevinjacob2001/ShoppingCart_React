@@ -13,7 +13,7 @@ function Cart_Page({cart}){
                     <Card.Body>
                         <Card.Title>{product.name}</Card.Title>
                         <Card.Text>{product.cost}</Card.Text>
-                        <Button  variant="primary">Remove from Cart</Button>
+                        <Button onClick={()=>removeFromCart(product)} variant="primary">Remove from Cart</Button>
                     </Card.Body>
                     </Card>
                     </div>
